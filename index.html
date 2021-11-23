@@ -13,27 +13,34 @@
   </ul>
   <input id="input" type="text" />
   <button onclick="adicionar()">add</button>
+  <p><span id="total">X</span> tarefas em aberto</p>
   <script>
     // pegando apontamentos para os elementos que quero usar
     const input = document.getElementById("input")
     const ul = document.getElementById("lista")
+    const span = document.getElementById("total")
+
+    // estado da aplicação
+    const tarefas = ["tarefa 1", "tarefa 2"]
 
     function adicionar() {
-      // pega o valor do input
-      const novaTarefa = input.value
-
-      // constrói um novo elemento LI
-      const li = document.createElement("li")
-
-      // coloca dentro do novo LI o valor do input
-      li.innerText = novaTarefa
-
-      // adiciona o novo LI na lista
-      ul.appendChild(li)
-
-      // reseta o valor de input
+      tarefas.push(input.value)
       input.value = ""
+      render()
     }
+
+    function render() {
+      ul.innerHTML = null
+      tarefas.forEach(i => {
+        const li = document.createElement("li")
+        li.innerText = i
+        ul.appendChild(li)
+      })
+
+      span.innerText = tarefas.length
+    }
+
+    render()
   </script>
 </body>
 
