@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>listagem</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>listagem</title>
-</head>
+  <body>
+    <div class="mod">
+      <h1>Tarefas</h1>
+      <input></input>
+      <button onclick="adicionar()">add</button>
+      
+      <ul id="lista"></ul>
+    </div>
 
-<body>
-  <ul id="lista">
-  </ul>
-  <input id="input" type="text" />
-  <button onclick="adicionar()">add</button>
-  <p><span id="total">X</span> tarefas em aberto</p>
-  <script>
-    // pegando apontamentos para os elementos que quero usar
-    const input = document.getElementById("input")
-    const ul = document.getElementById("lista")
-    const span = document.getElementById("total")
-
-    // estado da aplicação
-    const tarefas = ["tarefa 1", "tarefa 2"]
-
-    function adicionar() {
-      tarefas.push(input.value)
-      input.value = ""
-      render()
-    }
-
-    function render() {
-      ul.innerHTML = null
-      tarefas.forEach(i => {
-        const li = document.createElement("li")
-        li.innerText = i
-        ul.appendChild(li)
-      })
-
-      span.innerText = tarefas.length
-    }
-
-    render()
-  </script>
-</body>
-
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </body>
 </html>
