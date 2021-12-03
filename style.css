@@ -1,0 +1,35 @@
+* {
+  margin: 0%;
+}
+body {
+  background-color: yellowgreen;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.mod {
+  text-align: center;
+}
+
+ul {
+  font-size: 4vh;
+  background-color: rgba(0, 0, 0, 0.548);
+  text-align: left;
+}
+button {
+  border: 0ch;
+  color: white;
+  padding: 2vh;
+  background-color: rgba(0, 90, 0, 0.548);
+}
+button:hover {
+  background-color: darkgreen;
+}
+h1 {
+  text-shadow: 10px 10px 10px black;
+}
+input {
+  border: 3px solid black;
+}
