@@ -15,9 +15,9 @@ function adicionar() {
 
 function render() {
   ul.innerText = null;
-  tarefas.forEach((i) => {
-    const li = document.createElement("li", "<button><button>");
-    li.innerText = i;
+  tarefas.forEach(function (tarefa) {
+    const li = document.createElement("li");
+    li.innerText = tarefa;
     ul.appendChild(li);
   });
 }
