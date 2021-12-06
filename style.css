@@ -1,8 +1,11 @@
 * {
   margin: 0%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 body {
-  background-color: yellowgreen;
+  background-color: rgb(151, 255, 16);
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -11,43 +14,43 @@ body {
 
 .mod {
   text-align: center;
+  background-color: rgb(10, 224, 39);
+  padding: 10vh;
 }
 
 #add {
-  border: 0ch;
-  color: white;
+  border: 0;
+  color: rgb(255, 255, 255);
   padding: 2vh;
-  background-color: rgba(0, 90, 0, 0.548);
+  background-color: rgb(19, 126, 120);
   padding: 3vh 3vh;
 }
 #add:hover {
-  background-color: darkgreen;
+  background-color: rgb(25, 175, 20);
   transition-duration: 0.3s;
 }
 h1 {
-  text-shadow: 10px 10px 10px black;
 }
 input {
-  border: 3px solid black;
+  border: 0.5vh solid black;
   padding: 2vh 3vh;
-  position: relative;
 }
 ul {
   list-style-type: symbols();
   padding: 4vh;
   height: 50vh;
-  background-color: rgba(0, 0, 0, 0.548);
+  background-color: rgba(13, 16, 216, 0.555);
   overflow-y: auto;
   text-align: left;
   font-size: 4vh;
 }
 li {
-  background-color: rgba(175, 121, 20, 0.418);
+  background-color: rgb(19, 126, 120);
   margin: 1vh;
   padding: 1vh 2vh;
   border-radius: 1vh;
 }
 li:hover {
   transition-duration: 0.18s;
-  background-color: rgb(175, 121, 20);
+  background-color: rgb(25, 175, 20);
 }

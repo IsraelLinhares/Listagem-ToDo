@@ -5,7 +5,7 @@ const tarefas = [];
 
 function adicionar() {
   if (!input.value) {
-    alert("Cafe tua tarefa man?");
+    alert("Cade tua tarefa man?");
   } else {
     tarefas.push(input.value);
     input.value = "";
