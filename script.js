@@ -4,9 +4,13 @@ const input = document.querySelector("input");
 const tarefas = [];
 
 function adicionar() {
-  tarefas.push(input.value);
-  input.value = "";
-  render();
+  if (!input.value) {
+    alert("Cafe tua tarefa man?");
+  } else {
+    tarefas.push(input.value);
+    input.value = "";
+    render();
+  }
 }
 
 function render() {
@@ -15,7 +19,6 @@ function render() {
     const li = document.createElement("li", "<button><button>");
     li.innerText = i;
     ul.appendChild(li);
-    console.log(li);
   });
 }
 render();
