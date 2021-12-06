@@ -1,4 +1,3 @@
-// pegando apontamentos para os elementos que quero usar
 const ul = document.querySelector("#lista");
 const input = document.querySelector("input");
 
