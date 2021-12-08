@@ -1,24 +1,41 @@
-const ul = document.querySelector("#lista");
+const ul = document.querySelector("ul");
 const input = document.querySelector("input");
-
 const tarefas = [];
 
-function adicionar() {
+function add() {
   if (!input.value) {
-    alert("Cade tua tarefa man?");
+    alert("escreva uma tarefa man");
   } else {
-    tarefas.push(input.value);
+    const textOfTask = input.value;
+    tarefas.push(textOfTask);
     input.value = "";
-    render();
   }
+  render();
 }
 
 function render() {
-  ul.innerText = null;
-  tarefas.forEach(function (tarefa) {
+  ul.innerHTML = "";
+  for (tarefa of tarefas) {
     const li = document.createElement("li");
-    li.innerText = tarefa;
+    const TextOfTask = document.createTextNode(tarefa);
+
+    const deletar = document.createElement("button");
+    const pos = tarefas.indexOf(tarefa);
+
+    const deletarText = document.createTextNode("X");
+    deletar.appendChild(deletarText);
+
+    deletar.setAttribute("onclick", `deletTask(${pos})`);
+    deletar.setAttribute("id", "delet");
+
+    li.appendChild(TextOfTask);
     ul.appendChild(li);
-  });
+    li.appendChild(deletar);
+  }
 }
 render();
+
+function deletTask(pos) {
+  tarefas.splice(pos, 1);
+  render();
+}

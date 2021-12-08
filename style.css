@@ -1,7 +1,6 @@
 * {
-  margin: 0%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0vh;
+  font-family: "Times New Roman", Times, serif;
   box-sizing: border-box;
 }
 body {
@@ -14,26 +13,45 @@ body {
 
 .mod {
   text-align: center;
-  background-color: rgb(10, 224, 39);
+  background-color: rgb(28, 224, 10);
   padding: 10vh;
+  border-radius: 12vh;
 }
 
 #add {
   border: 0;
   color: rgb(255, 255, 255);
-  padding: 2vh;
   background-color: rgb(19, 126, 120);
+  border-radius: 1vh;
   padding: 3vh 3vh;
 }
 #add:hover {
+  cursor: pointer;
   background-color: rgb(25, 175, 20);
   transition-duration: 0.3s;
+  border-radius: 1.5vh;
 }
-h1 {
+
+#delet {
+  border: 0;
+  color: rgb(255, 255, 255);
+  margin: 1vh;
+  background-color: rgb(1, 163, 155);
+  border-radius: 1vh;
+  padding: 2vh 2vh;
+}
+#delet:hover {
+  background-color: rgb(221, 29, 22);
+  transition-duration: 0.5s;
+  border-radius: 1.5vh;
 }
 input {
   border: 0.5vh solid black;
   padding: 2vh 3vh;
+}
+input:hover {
+  border-radius: 1vh;
+  transition-duration: 1.3s;
 }
 ul {
   list-style-type: symbols();
