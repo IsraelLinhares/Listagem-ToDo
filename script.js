@@ -1,6 +1,7 @@
 const ul = document.querySelector("ul");
-const input = document.querySelector("input");
-const tarefas = [];
+const input = document.getElementById("inpute");
+let tarefas = [];
+let info = "";
 
 function add() {
   if (!input.value) {
@@ -12,7 +13,16 @@ function add() {
   }
   render();
 }
-
+addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    add();
+  }
+});
+function deletarAll() {
+  tarefas = [];
+  render();
+  console.log(tarefas);
+}
 function render() {
   ul.innerHTML = "";
   for (tarefa of tarefas) {
@@ -22,8 +32,9 @@ function render() {
     const deletar = document.createElement("button");
     const pos = tarefas.indexOf(tarefa);
 
-    const deletarText = document.createTextNode("X");
+    const deletarText = document.createTextNode("✘");
     deletar.appendChild(deletarText);
+    const makeInfoText = document.createTextNode("ℹ");
 
     deletar.setAttribute("onclick", `deletTask(${pos})`);
     deletar.setAttribute("id", "delet");

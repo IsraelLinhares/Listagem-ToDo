@@ -18,40 +18,42 @@ body {
   border-radius: 12vh;
 }
 
-#add {
+.add {
   border: 0;
   color: rgb(255, 255, 255);
   background-color: rgb(19, 126, 120);
   border-radius: 1vh;
   padding: 3vh 3vh;
 }
-#add:hover {
+.add:hover {
   cursor: pointer;
   background-color: rgb(25, 175, 20);
   transition-duration: 0.3s;
-  border-radius: 1.5vh;
+  border-radius: 2.5vh;
 }
 
 #delet {
+  font-size: 4vh;
   border: 0;
   color: rgb(255, 255, 255);
   margin: 1vh;
   background-color: rgb(1, 163, 155);
   border-radius: 1vh;
-  padding: 2vh 2vh;
+  padding: 1vh 1.2vh;
 }
 #delet:hover {
   background-color: rgb(221, 29, 22);
   transition-duration: 0.5s;
   border-radius: 1.5vh;
+  cursor: pointer;
 }
 input {
   border: 0.5vh solid black;
   padding: 2vh 3vh;
 }
 input:hover {
-  border-radius: 1vh;
-  transition-duration: 1.3s;
+  border-radius: 1.5vh;
+  transition-duration: 1s;
 }
 ul {
   list-style-type: symbols();
@@ -71,4 +73,25 @@ li {
 li:hover {
   transition-duration: 0.18s;
   background-color: rgb(25, 175, 20);
+}
+#Info {
+  border-radius: 2vh;
+  background-color: rgba(255, 255, 255, 0.568);
+  height: 5vw;
+  width: 16vw;
+  color: rgb(3, 10, 3);
+}
+#make {
+  border: 0;
+  color: rgb(255, 255, 255);
+  background-color: rgb(8, 8, 8);
+  border-radius: 1vh;
+  padding: 1.2vh 2.5vh;
+}
+#make:hover {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  background-color: rgb(0, 255, 255);
+  transition-duration: 0.3s;
+  border-radius: 2vh;
 }
